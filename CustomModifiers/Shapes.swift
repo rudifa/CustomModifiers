@@ -113,11 +113,9 @@ struct Striped<Target>: View where Target: Shape {
     }
 
     var body: some View {
-        ZStack {
-            VStripes(color: color)
-                .mask(target)
-                .overlay(target.stroke(color, lineWidth: lineWidth))
-        }
+        VStripes(color: color)
+            .mask(target)
+            .overlay(target.stroke(color, lineWidth: lineWidth))
     }
 }
 

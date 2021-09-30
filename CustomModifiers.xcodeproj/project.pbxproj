@@ -14,6 +14,7 @@
 		9DEC16EB2705DA4A007C45CA /* CustomModifiersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC16EA2705DA4A007C45CA /* CustomModifiersTests.swift */; };
 		9DEC16F52705DA4B007C45CA /* CustomModifiersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC16F42705DA4B007C45CA /* CustomModifiersUITests.swift */; };
 		9DEC16F72705DA4B007C45CA /* CustomModifiersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC16F62705DA4B007C45CA /* CustomModifiersUITestsLaunchTests.swift */; };
+		9DEC17042705DB13007C45CA /* ShapeStrokeAndFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC17032705DB13007C45CA /* ShapeStrokeAndFill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9DEC16F02705DA4B007C45CA /* CustomModifiersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomModifiersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEC16F42705DA4B007C45CA /* CustomModifiersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiersUITests.swift; sourceTree = "<group>"; };
 		9DEC16F62705DA4B007C45CA /* CustomModifiersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9DEC17032705DB13007C45CA /* ShapeStrokeAndFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeStrokeAndFill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				9DEC16D92705DA47007C45CA /* CustomModifiersApp.swift */,
 				9DEC16DB2705DA47007C45CA /* ContentView.swift */,
+				9DEC17032705DB13007C45CA /* ShapeStrokeAndFill.swift */,
 				9DEC16DD2705DA4A007C45CA /* Assets.xcassets */,
 				9DEC16DF2705DA4A007C45CA /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEC16DC2705DA47007C45CA /* ContentView.swift in Sources */,
+				9DEC17042705DB13007C45CA /* ShapeStrokeAndFill.swift in Sources */,
 				9DEC16DA2705DA47007C45CA /* CustomModifiersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 import SwiftUI
 
 // from https://swiftuirecipes.com/blog/stroke-and-fill-a-shape-in-swiftui
-
+// see also https://www.swiftbysundell.com/articles/stroking-and-filling-a-swiftui-shape-at-the-same-time/
 /*
 
  For whatever reason, stroking (i.e drawing a border) and filling a SwiftUI Shape at the same time is difficult and unintuitive. Shape has methods for both, stroke and fill, respectively, but they both return some View, meaning you can't chain them.
@@ -23,33 +23,51 @@ import SwiftUI
 
  */
 
-// Need this to let the extension know that the Shape
-// can be instantiated without additional params.
-protocol ParameterlessInitable {
-    init()
-}
+/*
 
-// Make existing Shapes conform to the new protocol.
-extension Circle: ParameterlessInitable {}
-extension Rectangle: ParameterlessInitable {}
-extension Capsule: ParameterlessInitable {
-    init() {
-        self.init(style: .circular)
-    }
-}
-extension Diamond: ParameterlessInitable {}
-extension Squiggle: ParameterlessInitable {}
+  ORIGINAL FROM swiftuirecipes
 
+ // Need this to let the extension know that the Shape
+ // can be instantiated without additional params.
+ protocol ParameterlessInitable {
+     init()
+ }
 
-extension Shape where Self: ParameterlessInitable {
+ // Make existing Shapes conform to the new protocol.
+ extension Circle: ParameterlessInitable {}
+ extension Rectangle: ParameterlessInitable {}
+ extension Capsule: ParameterlessInitable {
+     init() {
+         self.init(style: .circular)
+     }
+ }
+ extension Diamond: ParameterlessInitable {}
+ extension Squiggle: ParameterlessInitable {}
+
+ extension Shape where Self: ParameterlessInitable {
+     func stroke<StrokeStyle, FillStyle>(
+         _ strokeStyle: StrokeStyle,
+         lineWidth: CGFloat = 1,
+         fill fillStyle: FillStyle
+     ) -> some View where StrokeStyle: ShapeStyle, FillStyle: ShapeStyle {
+         Self()
+             .stroke(strokeStyle, lineWidth: lineWidth)
+             .background(Self().fill(fillStyle))
+     }
+ }
+
+ */
+
+// simplified, per Sundell
+
+extension Shape {
     func stroke<StrokeStyle, FillStyle>(
         _ strokeStyle: StrokeStyle,
         lineWidth: CGFloat = 1,
         fill fillStyle: FillStyle
     ) -> some View where StrokeStyle: ShapeStyle, FillStyle: ShapeStyle {
-        Self()
-            .stroke(strokeStyle, lineWidth: lineWidth)
-            .background(Self().fill(fillStyle))
+        stroke(strokeStyle, lineWidth: lineWidth)
+            .background(fill(fillStyle))
     }
 }
 

@@ -37,6 +37,9 @@ extension Capsule: ParameterlessInitable {
         self.init(style: .circular)
     }
 }
+extension Diamond: ParameterlessInitable {}
+extension Squiggle: ParameterlessInitable {}
+
 
 extension Shape where Self: ParameterlessInitable {
     func stroke<StrokeStyle, FillStyle>(
@@ -58,6 +61,12 @@ struct ShapeStrokeAndFill: View {
                 .frame(width: 60, height: 60)
             Capsule()
                 .stroke(Color.blue, lineWidth: 5, fill: Color.orange)
+                .frame(width: 100, height: 60)
+            Diamond()
+                .stroke(Color.black, lineWidth: 10, fill: Color.pink)
+                .frame(width: 100, height: 60)
+            Squiggle()
+                .stroke(Color.black, lineWidth: 10, fill: Color.white)
                 .frame(width: 100, height: 60)
             Rectangle()
                 .stroke(Color.black, lineWidth: 10, fill: Color.white)

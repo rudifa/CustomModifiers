@@ -18,3 +18,5 @@ jobs:
           ls ${{ github.workspace }}
       - run: swift --version
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+      #  - run: xcrun swift -version # xcrun: command not found

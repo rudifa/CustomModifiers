@@ -21,3 +21,4 @@ jobs:
     #   run: swift test -v
     - name: xcodebuild test
       run: xcodebuild test -scheme CustomModifiers -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' -verbose
+      

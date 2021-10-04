@@ -6,10 +6,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: macos-latest
     steps:
-        - uses: fwal/setup-swift@v1
-          with:
-                swift-version: "5.5.0"
-        - name: Get swift version
+      - uses: fwal/setup-swift@v1
+        with:
+              swift-version: "5.5.0"
+      - name: Get swift version
         run: swift --version # Swift 5.1.0
 
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."

@@ -28,4 +28,13 @@ extension Shape {
                 .frame(width: 60, height: 60)
 ```
 
-#### Moved items into the package [rfSwiftUI](https://github.com/rudifa/rfSwiftUI)
+#### Moved custom shapes and modifiers into the package [rfSwiftUI](https://github.com/rudifa/rfSwiftUI)
+
+#### github actions
+At this stage the github actions `build_and_test` and `build_jazzy_docs` fail, because 
+```
+package at 'https://github.com/rudifa/rfSwiftUI' @ 21b670e...
+```
+``` 
+is using Swift tools version 5.5.0 but the installed version is 5.3.0
+```

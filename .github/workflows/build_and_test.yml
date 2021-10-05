@@ -2,11 +2,11 @@ name: build_and_test
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
   workflow_dispatch:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -21,4 +21,3 @@ jobs:
     #   run: swift test -v
     - name: xcodebuild test
       run: xcodebuild test -scheme CustomModifiers -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest' -verbose
-      
